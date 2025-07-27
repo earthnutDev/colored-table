@@ -1,0 +1,13 @@
+{
+  "hot": {
+    "base": "..",
+    "watch": ["table"],
+    "skip": ["exportMjs", "exportCjs", "exportTypes", "out"],
+    "cwd": ".",
+    "code": "node .eg/index.mjs",
+    "args": ["-v"],
+    "beforeRestart": {
+      "table": "jja cls && rollup --config rollup.config.eg.js"
+    }
+  }
+}

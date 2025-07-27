@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>简单测试</title>
+</head>
+
+<body>
+
+</body>
+<script src=".eg/index.mjs"></script>
+<script>
+  const a = {
+    color: '#f02'
+  };
+
+  class TablePro {
+
+  }
+
+  const b = new TablePro();
+
+  Object.setPrototypeOf(b, a)
+
+  console.log(b.color);
+
+  class RowPro {
+
+  }
+
+  const rowPro = new RowPro()
+
+  Object.setPrototypeOf(rowPro, b);
+
+  console.log(rowPro.color)
+
+  const cell = {}
+
+  Object.setPrototypeOf(cell, rowPro);
+
+
+  a.color = '#ff3'
+
+  console.log('====================================');
+  console.log(cell.color);
+  console.log('====================================');
+
+
+</script>
+
+</html>

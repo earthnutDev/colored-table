@@ -1,0 +1,63 @@
+{
+  "name": "colored-table",
+  "version": "0.1.0",
+  "type": "module",
+  "private": true,
+  "description": "一个简单的在控制台及控制台构建彩色文本表格的工具",
+  "scripts": {
+    "b": "rollup --config rollup.config.js && tsc -p tsconfig.types.json",
+    "build": "jja cls rm dist && pnpm run b && pnpm run clean:package",
+    "clean:package": "node scripts/clean-package-json.js",
+    "diff": "jja pkg --diff=官方",
+    "prepublishOnly": "pjj",
+    "push": "gvv",
+    "push:version": "gvv",
+    "test": "jja rm .eg && rollup --config rollup.config.eg.js && node .eg/index.mjs",
+    "vjj": "vjj",
+    "prepare": "husky",
+    "eslint": "jja cls && eslint packages",
+    "prettier": "jja cls && prettier . --write"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@eslint/js": "^9.32.0",
+    "@qqi/check-version": "^1.0.4",
+    "@qqi/rollup-external": "^1.0.9",
+    "@rollup/plugin-commonjs": "^28.0.6",
+    "@rollup/plugin-json": "^6.1.0",
+    "@rollup/plugin-node-resolve": "^16.0.1",
+    "@rollup/plugin-terser": "^0.4.4",
+    "@rollup/plugin-typescript": "^12.1.4",
+    "@types/node": "^24.1.0",
+    "a-command": "^2.3.13",
+    "a-node-tools": "^4.2.18",
+    "eslint": "^9.32.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-jsdoc": "^51.4.1",
+    "globals": "^16.3.0",
+    "gvv": "^0.1.5",
+    "husky": "^9.1.7",
+    "jja": "^2.3.14",
+    "lint-staged": "^16.1.2",
+    "pjj": "^1.0.3",
+    "prettier": "^3.6.2",
+    "rollup": "^4.46.0",
+    "rollup-plugin-cleanup": "^3.2.1",
+    "rollup-plugin-copy": "^3.5.0",
+    "tslib": "^2.8.1",
+    "typescript": "^5.8.3",
+    "typescript-eslint": "^8.38.0",
+    "vjj": "^1.0.9"
+  },
+  "lint-staged": {
+    "*.{js,ts}": [
+      "prettier --write"
+    ]
+  },
+  "dependencies": {
+    "@color-pen/static": "^1.0.1",
+    "a-js-tools": "^1.0.10",
+    "a-type-of-js": "^1.0.7",
+    "color-pen": "^2.0.13"
+  }
+}
